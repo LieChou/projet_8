@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>To-do list app</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="node_modules/todomvc-common/base.css">
 	<link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
 </head>
@@ -12,10 +13,12 @@
 	<section class="todoapp">
 		<header class="header">
 			<h1>todos</h1>
-			<input class="new-todo" placeholder="What needs to be done?" autofocus>
+			<label for="new-todo" aria-label="new-todo">
+				<input id="new-todo" class="new-todo" placeholder="What needs to be done?" autofocus>
+			</label>
 		</header>
 		<section class="main">
-			<input class="toggle-all" id="toggle-all" type="checkbox">
+			<input class="toggle-all" id="toggle-all" name="toggle-all" type="checkbox">
 			<label for="toggle-all">Mark all as complete</label>
 			<ul class="todo-list"></ul>
 		</section>
